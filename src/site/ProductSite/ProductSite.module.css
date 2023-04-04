@@ -1,0 +1,22 @@
+.headerContent ul {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.headerContent ul li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  /* background: url('img/check.png'); */
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.headerContent ul {
+  list-style-type: none;
+}
+
+.headerContent ul li {
+  margin-top: 1rem;
+}

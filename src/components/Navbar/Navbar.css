@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #fcfcfc;
 }
 
@@ -18,8 +18,8 @@ body {
 }
 
 .navbar {
-  height: 60px;
-  background-color: #fef7e5;
+  height: 95px;
+  background-color: #ffffff;
   position: relative;
 }
 
@@ -31,12 +31,14 @@ body {
 }
 
 .nav-elements {
+  z-index: 1;
 }
 
 .nav-elements ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  margin-top: 15px;
 }
 
 .nav-elements ul li:not(:last-child) {
@@ -57,13 +59,20 @@ body {
 }
 
 .nav-elements ul a.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
   width: 100%;
   height: 2px;
   background-color: #574c4c;
+}
+
+.kontaktButton {
+  color: red;
+  border: 2px solid #007cc3;
+  border-radius: 20px;
+  padding: 10px 20px;
 }
 
 @media (max-width: 768px) {
@@ -81,7 +90,7 @@ body {
   .nav-elements {
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 95px;
     background-color: #fef7e5;
     width: 0px;
     height: calc(100vh - 60px);

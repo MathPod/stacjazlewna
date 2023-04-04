@@ -1,0 +1,18 @@
+.test {
+    background: #fff 0% 0% no-repeat padding-box;
+    border: 1px solid #dfdfdf;
+    border-radius: 21px;
+    min-height: 100%;
+    width: 100%;
+    padding: 0 15px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .h2Title {
+    font-weight: 400;
+    font-size: 34px;
+    text-transform: capitalize;
+    text-align: left;
+  }

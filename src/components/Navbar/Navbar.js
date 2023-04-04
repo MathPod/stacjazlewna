@@ -1,51 +1,54 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import './Navbar.css'
-import logotype from '../../assets/pol_eko_logo_menu/pol-eko-logo-color.png'
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import "./Navbar.css";
+import logotype from "../../assets/img/pol_eko_logo_menu/pol-eko-logo-color.png";
 // import { ReactComponent as Hamburger } from '../../assets/icons/hamburger.svg'
 // import { ReactComponent as Brand } from '../../assets/icons/logo.svg'
 
-
-
-
 const Navbar = () => {
-  const [showNavbar, setShowNavbar] = useState(false)
+  const [showNavbar, setShowNavbar] = useState(false);
 
   const handleShowNavbar = () => {
-    setShowNavbar(!showNavbar)
-  }
+    setShowNavbar(!showNavbar);
+  };
 
   return (
     <nav className="navbar">
       <div className="container">
         <div className="logo">
-          <img src={logotype} alt="logo" style={{maxWidth: '150px', marginTop: '-5px'}}/>
+          <img
+            src={logotype}
+            alt="logo"
+            style={{ maxWidth: "200px", marginTop: "-5px" }}
+          />
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           {/* <Hamburger /> */} icon
         </div>
-        <div className={`nav-elements  ${showNavbar && 'active'}`}>
+        <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul>
             <li>
-                <Link to="/">Home</Link>
+              <NavLink exact to="/">Home</NavLink>
             </li>
             <li>
-                <a href="/produkty">Produkty</a>
+              <NavLink to="/produkty">Produkty</NavLink>
             </li>
             <li>
-                <a href="/projekty">Projekty</a>
+              <NavLink to="/projekty">Projekty</NavLink>
             </li>
             <li>
-                <a href="/o-nas">O Nas</a>
+              <NavLink to="/o-nas">O Nas</NavLink>
             </li>
             <li>
-                <a href="/kontakt">Kontakt</a>
+              <NavLink className="kontaktButton" to="/kontakt">
+                Kontakt
+              </NavLink>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

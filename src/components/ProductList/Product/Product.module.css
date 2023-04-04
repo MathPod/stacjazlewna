@@ -1,0 +1,39 @@
+.productBox {
+  background: #fff 0% 0% no-repeat padding-box;
+  border: 1px solid #dfdfdf;
+  border-radius: 21px;
+  min-height: 100%;
+  width: 100%;
+  padding: 0 15px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 2rem
+}
+
+.productBox:hover {
+  background: #fff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 20px #2A295C26;
+    border: 1px solid #dfdfdf;
+    border-radius: 21px;
+    cursor: pointer;
+}
+
+.buttonMore {
+  width: 80%;
+  background-color: #007cc3;
+  font-size: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px
+}
+
+.productCover {
+  max-width: 100%;
+}
+
+.link, .link:hover  {
+  text-decoration: none;
+  color: var(--bs-body-color);
+}
+
+
