@@ -14,7 +14,7 @@ function ProductSite(props) {
         <Col md={5} lg={5}>
             <img src={productImg} style={{maxWidth: "100%"}}/>
         </Col>
-        <Col md={7} lg={7} className={style.headerContent}>
+        <Col md={7} lg={7} className={`productSiteHeaderContent ${style.headerContent}`}>
             <h2>Stacja zlewna ścieków dowożonych FEKO+ /S</h2>
             <ul>
                 <li>Kontener ze stali nierdzewnej</li>

@@ -36,4 +36,8 @@
   color: var(--bs-body-color);
 }
 
+.deviceTitle {
+  color: black;
+}
+
 

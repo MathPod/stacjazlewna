@@ -1,0 +1,9 @@
+.productSiteHeaderContent ul li::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url('img/check.png');
+    display: inline-block;
+    margin-right: 0.8rem;
+    background-size: cover;
+  } 
