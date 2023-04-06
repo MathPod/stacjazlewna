@@ -7,8 +7,14 @@
 
 .headerContent ul {
   list-style-type: none;
+  padding: 0;
 }
 
 .headerContent ul li {
   margin-top: 1rem;
+}
+
+.h2title {
+  text-align: center;
+  font-size: 35px;
 }

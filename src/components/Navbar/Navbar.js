@@ -16,11 +16,13 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="logo">
-          <img
-            src={logotype}
-            alt="logo"
-            style={{ maxWidth: "200px", marginTop: "-5px" }}
-          />
+          <Link to="/">
+            <img
+              src={logotype}
+              alt="logo"
+              style={{ maxWidth: "200px", marginTop: "-5px" }}
+            />
+          </Link>
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           {/* <Hamburger /> */} icon
@@ -28,7 +30,9 @@ const Navbar = () => {
         <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul>
             <li>
-              <NavLink exact to="/">Home</NavLink>
+              <NavLink exact to="/">
+                Home
+              </NavLink>
             </li>
             <li>
               <NavLink to="/produkty">Produkty</NavLink>

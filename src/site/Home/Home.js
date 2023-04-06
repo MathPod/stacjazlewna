@@ -2,14 +2,15 @@ import React from "react";
 import style from "./style.module.css";
 import Slider from "../../components/Slider/Slider";
 import Navbar from "../../components/Navbar/Navbar";
-import Content from "./Content/Content";
 
-function Home() {
+import ProductList from "../../components/ProductList/ProductList";
 
+function Home(props) {
+    
     return(
         <>
         <Slider />
-        <Content />
+        <ProductList filteredCategoryDevices={props.filteredCategoryDevices} listLinkTo="category"/>
         </>
     )
 

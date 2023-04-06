@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import style from "./Product.module.css";
 import productImg from "../../../assets/img/products/stacja-zlewna-sciekow.webp";
 
 function Product(props) {
+  const[listLinkTo, setListLinkTo] = useState(props.listLinkTo)
+  
+  let myLink = null;
+  if(listLinkTo === "product") {myLink = `/${props.category_url_pl}/${props.url_pl}`}
+  if(listLinkTo === "category") {myLink = `/${props.category_url_pl}`}
+
   return (
-    <Link to="/produkt/inkubator" className={style.link}>
+    <Link to={myLink} className={style.link}>
       <div className={style.productBox}>
         <img src={productImg} className={style.productCover} />
         <div className="caption">

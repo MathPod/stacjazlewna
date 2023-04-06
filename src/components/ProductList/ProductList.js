@@ -6,56 +6,24 @@ import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
 import Product from "./Product/Product";
 
-function ProductList() {
-  const [deviceData, setDeviceData] = useState("");
-  const [filteredCategoryDevices, setFilteredCategoryDevices] = useState([]);
+function ProductList(props) {
+  const[listLinkTo, setListLinkTo] = useState(props.listLinkTo)
 
-  const filterCategoryDevices = (data) => {
-    let filteredArray = [];
-    let flaga = false;
-
-    data.forEach((object, index) => {
-      filteredArray.forEach((element) => {
-        element.category_pl === object.category_pl
-          ? (flaga = true)
-          : (flaga = false);
-      });
-      if (flaga === false) filteredArray.push(object);
-    });
-   
-    setFilteredCategoryDevices(filteredArray);
-  };
-
-  const generateCategoryList = () => {
-    
-
-  };
-
-  useEffect(() => {
-    fetch("/jsonData/devicesData.json")
-      .then((res) => res.json())
-      .then((data) => filterCategoryDevices(data));
-  }, []);
-
-  useEffect(() => {
-    console.log('zmienil sie stan filteredCategoryDevices', filteredCategoryDevices)
-    generateCategoryList()
-
-  }, [filteredCategoryDevices])
-
+  console.log(listLinkTo)
+ 
   return (
     <Container fluid style={{ maxWidth: "1320px" }}>
-      <h2 className={style.h2Title}>Urządzenia wodno ściekowe</h2>
+      
       <Row style={{ marginTop: "2rem" }}>
-      {(filteredCategoryDevices !== []) ? filteredCategoryDevices.map((element) => {
+      {props.filteredCategoryDevices.map((element) => {
         return (
           <>
           <Col mb={5} md={3} sm={6} style={{ marginBottom: "2rem" }}>
-            <Product {...element}/>
+            <Product {...element} listLinkTo={listLinkTo}/>
           </Col>
           </>
         )
-      }) : <p>niema</p> }
+      }) }
       </Row>
       
     </Container>
