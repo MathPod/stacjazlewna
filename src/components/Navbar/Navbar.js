@@ -7,6 +7,7 @@ import logotype from "../../assets/img/pol_eko_logo_menu/pol-eko-logo-color.png"
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
+  
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
@@ -37,9 +38,7 @@ const Navbar = () => {
             <li>
               <NavLink to="/produkty">Produkty</NavLink>
             </li>
-            <li>
-              <NavLink to="/projekty">Projekty</NavLink>
-            </li>
+
             <li>
               <NavLink to="/o-nas">O Nas</NavLink>
             </li>

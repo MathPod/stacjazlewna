@@ -14,6 +14,9 @@ import Footer from "./components/Footer/Footer";
 import ProductSite from "./site/ProductSite/ProductSite";
 import ProductCategory from "./site/ProductCategory/ProductCategory";
 import { useEffect, useState } from "react";
+import ProductList from "./components/ProductList/ProductList";
+import oNas from "./site/oNas/oNas";
+import Kontakt from "./site/Kontakt/Kontakt";
 
 function App() {
   const [devicesData, setDevicesData] = useState([]);
@@ -50,10 +53,10 @@ function App() {
         <Navbar />
         <Switch>
           
-          <Route path="/o-nas"></Route>
+          <Route path="/o-nas" component={oNas}></Route>
           <Route path="/projekty"></Route>
-          <Route path="/produkty"></Route>
-          <Route path="/kontakt"></Route>
+          <Route path="/produkty" component={ProductList}></Route>
+          <Route path="/kontakt" component={Kontakt}></Route>
 
           {filteredCategoryDevices.map((element) => {
             return (
