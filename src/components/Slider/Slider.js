@@ -20,7 +20,7 @@ function Slider() {
     >
       <Carousel.Item
         className="caruselItem caruselItem1"
-        style={{ background: `url(${slider1_background})` }}
+        // style={{ background: `url(/img/slider/slide1.webp)` }}
       >
         <img className="d-block w-100" src={logoPolEko} alt="First slide" />
         <Carousel.Caption>
