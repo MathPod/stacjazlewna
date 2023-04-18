@@ -16,6 +16,7 @@ function ProductList(props) {
       
       <Row style={{ marginTop: "2rem" }}>
       {props.filteredCategoryDevices.map((element) => {
+        console.log(element)
         return (
           <>
           <Col mb={5} md={3} sm={6} style={{ marginBottom: "2rem" }}>

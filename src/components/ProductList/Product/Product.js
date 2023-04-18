@@ -13,7 +13,7 @@ function Product(props) {
   return (
     <Link to={myLink} className={style.link}>
       <div className={style.productBox}>
-        <img src={productImg} className={style.productCover} />
+        <img src={`/img/devices_img/${props.url_pl}.webp`} className={style.productCover} />
         <div className="caption">
           <h4 className={style.deviceTitle}>{props.name_pl}</h4>
           <p>Short description</p>

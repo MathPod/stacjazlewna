@@ -55,7 +55,10 @@ function App() {
           
           <Route path="/o-nas" component={oNas}></Route>
           <Route path="/projekty"></Route>
-          <Route path="/produkty" component={ProductList}></Route>
+          <Route path="/produkty">
+            <h1>Produkty</h1>
+            <ProductList filteredCategoryDevices={filteredCategoryDevices} listLinkTo="category"/>
+          </Route>
           <Route path="/kontakt" component={Kontakt}></Route>
 
           {filteredCategoryDevices.map((element) => {
@@ -69,10 +72,7 @@ function App() {
           {filteredCategoryDevices.map((element) => {
             return (
                 <Route path={`/${element.category_url_pl}`}>
-                  <ProductCategory
-                    devicesData={devicesData}
-                    title={element.category_pl}
-                  />
+                  <ProductCategory />
                 </Route>
             );
           })}
