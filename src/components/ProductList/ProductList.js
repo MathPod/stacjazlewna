@@ -9,18 +9,18 @@ import Product from "./Product/Product";
 function ProductList(props) {
   const[listLinkTo, setListLinkTo] = useState(props.listLinkTo)
 
-  console.log(listLinkTo)
+  
  
   return (
     <Container fluid style={{ maxWidth: "1320px" }}>
       
       <Row style={{ marginTop: "2rem" }}>
       {props.filteredCategoryDevices.map((element) => {
-        console.log(element)
+       
         return (
           <>
-          <Col mb={5} md={3} sm={6} style={{ marginBottom: "2rem" }}>
-            <Product {...element} listLinkTo={listLinkTo}/>
+          <Col mb={5} md={3} sm={6} style={{ marginBottom: "2rem" }} key={element.id}>
+            <Product {...element} listLinkTo={listLinkTo} />
           </Col>
           </>
         )

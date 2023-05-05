@@ -8,6 +8,7 @@ import productImg from "../../assets/img/products/stacja-zlewna-sciekow.webp";
 import { Collapse } from "bootstrap";
 import parse from "html-react-parser";
 import ProductList from "../../components/ProductList/ProductList";
+import BreadCrumbs from "../../components/Breadcrumbs/BreadCrumbs";
 
 function ProductSite(props) {
   const params = useParams();
@@ -24,7 +25,7 @@ function ProductSite(props) {
   useEffect(() => {
    
     //setDeviceUrl(params.name);
-    console.log("hello")
+   
 
     fetch("/jsonData/devicesData.json")
       .then((res) => res.json())
@@ -39,6 +40,7 @@ function ProductSite(props) {
 
   return (
     <Container fluid style={{ maxWidth: "1320px", paddingBottom: '2rem'}}>
+      <BreadCrumbs />
       <Row style={{ marginTop: "2rem" }}>
         <Col md={5} lg={5}>
           {filteredDevice && <img src={`/img/devices_img/${filteredDevice[0].url_pl}.webp`} style={{ maxWidth: "100%" }} />}

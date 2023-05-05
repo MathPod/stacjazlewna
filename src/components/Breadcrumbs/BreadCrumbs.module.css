@@ -1,0 +1,25 @@
+.breadCrumbsContainer {
+    /* background-color: red; */
+    max-width: 1320px;
+    margin: 1rem auto;
+    text-align: right;
+    margin-top: 4rem;
+}
+
+.breadCrumbsList li {
+    display: inline-block;
+}
+
+.breadCrumbsList li:not(:first-child) {
+    margin-left: 1rem;
+}
+
+.breadCrumbsList li a {
+    text-decoration: none;
+    color: #007cc3;
+}
+
+.breadCrumbsList li p {
+    display: inline-block;
+    color: #007cc3;
+}
